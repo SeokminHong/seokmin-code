@@ -28,7 +28,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
-RUN sudo apt-get install -y zlib1g-dev build-utils clang-format
+RUN sudo apt-get install -y zlib1g-dev build-essential clang-format
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
