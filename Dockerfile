@@ -22,13 +22,16 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # You can add custom software and dependencies for your environment below
 # -----------
 
+# Git configuration
+RUN git config --global user.name "seokmin" && git config --global user.email "ghdtjrals240@naver.com"
+
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-# RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension ms-vscode.cpptools
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
-RUN sudo apt-get install -y zlib1g-dev build-essential clang-format
+RUN sudo apt-get install -y zlib1g-dev build-essential clang-format gdb
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
