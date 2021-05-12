@@ -27,7 +27,8 @@ RUN git config --global user.name "seokmin" && git config --global user.email "g
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-RUN code-server --install-extension ms-vscode.cpptools
+RUN curl -o cpptools-linux.vsix https://github.com/SeokminHong/seokmin-code/blob/main/cpptools-linux.vsix?raw=true
+RUN code-server --install-extension cpptools-linux.vsix
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
