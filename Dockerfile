@@ -31,7 +31,7 @@ RUN code-server --install-extension ms-vscode.cpptools
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
-RUN sudo apt-get install -y zlib1g-dev build-essential clang-format gdb
+RUN sudo apt-get install -y zlib1g-dev build-essential clang-format gdb check
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
